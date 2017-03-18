@@ -18,7 +18,7 @@ sudo mysql -sfu root < "mysql_secure_installation.sql"
 rm -f mysql_secure_installation.sql
 sudo systemctl restart mysql
 
-sudo apt-get install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi -y
+sudo apt-get install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi php7.0-GD -y
 sudo wget -O /etc/php/7.0/apache2/php.ini  https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/php.ini
 sudo mkdir /var/log/php
 sudo chown www-data /var/log/php
