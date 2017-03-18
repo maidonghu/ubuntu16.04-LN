@@ -10,7 +10,8 @@ adduser mike sudo
 
 mkdir /home/mike/.ssh
 chmod 700 /home/mike/.ssh
-cat ./.ssh/authorized_keys >> /home/mike/.ssh/authorized_keys
+wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/authorized_keys
+cat ./authorized_keys >> /home/mike/.ssh/authorized_keys
 chown mike:mike /home/mike -R
 
 apt update && apt upgrade -y
