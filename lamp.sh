@@ -21,3 +21,12 @@ sudo wget -o /etc/php/7.0/apache2/php.ini  https://raw.githubusercontent.com/mai
 
 sudo mysql -sfu root < "wordpress.sql"
 rm -f wordpress.sql
+sudo mkdir /var/www/html/linode.mikecloud.info/src/
+cd /var/www/html/linode.mikecloud.info/src/
+sudo chown -R www-data:www-data /var/www/html/linode.mikecloud.info/
+sudo wget http://wordpress.org/latest.tar.gz
+sudo -u www-data tar -xvf latest.tar.gz
+sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
+sudo mv wordpress/* ../public_html/
+sudo chown -R www-data:www-data /var/www/html/linode.mikecloud.info/public_html
+
