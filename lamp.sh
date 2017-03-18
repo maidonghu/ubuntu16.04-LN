@@ -10,7 +10,7 @@ sudo wget -O /etc/apache2/sites-available/linode.mikecloud.info.conf  https://ra
 sudo mkdir -p /var/www/html/linode.mikecloud.info/{public_html,logs}
 sudo a2ensite linode.mikecloud.info.conf
 sudo a2dissite 000-default.conf
-sudo systemctl reload apache2
+sudo systemctl restart apache2
 
 export DEBIAN_FRONTEND=noninteractive
 sudo -E apt-get install -y -q mysql-server
@@ -34,4 +34,4 @@ sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
 sudo mv wordpress/* ../public_html/
 sudo chown -R www-data:www-data /var/www/html/linode.mikecloud.info/public_html
 
-sudo service apache2 reload
+sudo systemctl restart apache2
