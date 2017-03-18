@@ -5,7 +5,7 @@ sudo a2dismod mpm_event
 sudo a2enmod mpm_prefork
 sudo systemctl restart apache2
 
-get /etc/apache2/sites-available/linode.mikecloud.info.conf
+wget -o /etc/apache2/sites-available/linode.mikecloud.info.conf  https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/linode.mikecloud.info.conf
 sudo mkdir -p /var/www/html/linode.mikecloud.info/{public_html,logs}
 sudo a2ensite linode.mikecloud.info.conf
 sudo a2dissite 000-default.conf
