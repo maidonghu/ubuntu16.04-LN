@@ -11,3 +11,5 @@ sudo a2ensite linode.mikecloud.info.conf
 sudo a2dissite 000-default.conf
 export DEBIAN_FRONTEND=noninteractive
 sudo -E apt-get install -y -q mysql-server
+sudo mysql -sfu root < "mysql_secure_installation.sql"
+
