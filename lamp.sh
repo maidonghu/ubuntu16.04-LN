@@ -32,3 +32,4 @@ sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
 sudo mv wordpress/* ../public_html/
 sudo chown -R www-data:www-data /var/www/html/linode.mikecloud.info/public_html
 
+sudo service apache2 reload
