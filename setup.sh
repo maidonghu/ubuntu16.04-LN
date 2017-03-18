@@ -14,6 +14,7 @@ wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/authorize
 cat ./authorized_keys >> /home/mike/.ssh/authorized_keys
 chown mike:mike /home/mike -R
 
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp -y
