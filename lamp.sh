@@ -1,6 +1,6 @@
 sudo apt-get install apache2  -y
-get /etc/apache2/apache2.conf
-get /etc/apache2/mods-available/mpm_prefork.conf
+wget -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/apache2.conf
+wget -o /etc/apache2/mods-available/mpm_prefork.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/mpm_prefork.conf
 sudo a2dismod mpm_event
 sudo a2enmod mpm_prefork
 sudo systemctl restart apache2
